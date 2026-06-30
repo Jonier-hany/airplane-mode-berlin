@@ -393,9 +393,11 @@ body::before {
     font-size: 1rem;
     font-weight: 500;
 }
+
 .welcome-image {
     width: 100%;
-    height: 500px;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 15px;
     display: block;
@@ -410,7 +412,10 @@ body::before {
     animation: fadeInUp 0.8s ease-out;
 }
 
-.}
+.location-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
 
 .location-card {
     padding: var(--spacing-lg);
@@ -444,14 +449,17 @@ body::before {
     color: var(--text-muted);
     font-size: 3rem;
 }
+
 .location-image {
     width: 100%;
-    height: 600px;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 15px;
     display: block;
     margin-top: var(--spacing-md);
 }
+
 /* Landmarks Section */
 .landmarks-section {
     padding: var(--spacing-xl) 0;
@@ -514,11 +522,13 @@ body::before {
 
 .landmark-image {
     width: 100%;
-    height: 350px;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 12px;
     display: block;
-}}
+}
+
 /* History Section */
 .history-section {
     padding: var(--spacing-xl) 0;
@@ -558,13 +568,16 @@ body::before {
     color: var(--text-muted);
     font-size: 3rem;
 }
+
 .history-image {
     width: 100%;
-    height: 370px;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 15px;
     display: block;
 }
+
 /* Wall Section */
 .wall-section {
     padding: var(--spacing-xl) 0;
@@ -606,9 +619,11 @@ body::before {
     margin-top: var(--spacing-lg);
     animation: fadeInUp 0.8s ease-out 0.2s both;
 }
+
 .wall-image {
     width: 100%;
-    height: 600px;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 15px;
     display: block;
@@ -637,9 +652,11 @@ body::before {
     color: var(--text-muted);
     font-size: 4rem;
 }
+
 .food-image {
     width: 100%;
-    height: 600px;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 15px;
     display: block;
@@ -668,13 +685,16 @@ body::before {
     color: var(--text-muted);
     font-size: 4rem;
 }
+
 .art-image {
     width: 100%;
-    height: 600px;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 15px;
     display: block;
 }
+
 /* Closing Section */
 .closing-section {
     min-height: 100vh;
@@ -839,17 +859,23 @@ body::before {
         font-size: 2rem;
     }
 
-    .welcome-image-placeholder,
-    .location-image-placeholder,
-    .history-image-placeholder,
-    .wall-image-placeholder,
-    .food-image-placeholder,
-    .art-image-placeholder {
-        height: 300px;
+    .welcome-image,
+    .location-image,
+    .history-image,
+    .wall-image,
+    .food-image,
+    .art-image {
+        max-height: 300px;
+        width: 100%;
+        height: auto;
     }
 
     .landmark-card {
         padding: var(--spacing-md);
+    }
+
+    .landmark-image {
+        max-height: 250px;
     }
 
     .card-header h2 {
@@ -908,16 +934,24 @@ body::before {
         font-size: 3rem;
     }
 
-    .welcome-image-placeholder,
-    .location-image-placeholder,
-    .history-image-placeholder,
-    .wall-image-placeholder {
-        height: 250px;
+    .welcome-image,
+    .location-image,
+    .history-image,
+    .wall-image {
+        max-height: 200px;
+        width: 100%;
+        height: auto;
     }
 
-    .food-image-placeholder,
-    .art-image-placeholder {
-        height: 300px;
+    .food-image,
+    .art-image {
+        max-height: 250px;
+        width: 100%;
+        height: auto;
+    }
+
+    .landmark-image {
+        max-height: 200px;
     }
 
     .closing-title {
